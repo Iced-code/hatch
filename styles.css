@@ -25,25 +25,28 @@
 } */
 
 body {
-    height: 100vh;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main {
-    width: 80vmin;          /* responsive size */
+    width: 70vmin;          /* responsive size */
     aspect-ratio: 1 / 1;    /* keeps it a square */
     background-color: rgb(211,211,211);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    border-radius: 12px;
+    border-radius: 1rem;
 }
 
 .main p {
     font-size: 2rem;
     -webkit-user-select: none;
     user-select: none;
+}
+.main:hover {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2);
 }
