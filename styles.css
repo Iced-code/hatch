@@ -1,14 +1,9 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 98vh;
     width: 98%;
-}
-
-.container * {
-    text-align: center;
-    align-items: center;
 }
 
 .main {
@@ -27,4 +22,29 @@
 
 .main:hover {
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2);
+} */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 80vmin;          /* responsive size */
+    aspect-ratio: 1 / 1;    /* keeps it a square */
+    background-color: rgb(211,211,211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 12px;
+}
+
+.main p {
+    font-size: 2rem;
+    -webkit-user-select: none;
+    user-select: none;
 }
