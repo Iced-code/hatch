@@ -1,0 +1,20 @@
+.main {
+    background-color: lightgray;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+    margin: 10rem 35rem;
+}
+
+.main p {
+    font-size: 2rem;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.main:hover {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2);
+}
