@@ -29,6 +29,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .main {
@@ -44,9 +47,18 @@ body {
 
 .main p {
     font-size: 2rem;
-    -webkit-user-select: none;
-    user-select: none;
 }
 .main:hover {
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2);
+}
+
+
+table, td {
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: left;
+}
+
+td:hover {
+    background-color: #b0b0b0;
 }
