@@ -8,7 +8,7 @@ function updateCounter(){
     // counter.innerText = count;
 }
 
-let emojis = ["⭐", "🌙", "☀️", "🪐", "☄️", "✨"];
+let emojis = ["⭐", "🌙", "☀️", "🪐", "☄️", "✨", "🚀"];
 
 function createTableFromJson() {
   // Get the container element
@@ -42,23 +42,48 @@ function createTableFromJson() {
     table.appendChild(dataRow);
   }); */
 
-  for(let i = 0; i < 14; i++) {
+
+  /* for(let i = 0; i < 14; i++) {
     const dataRow = document.createElement('tr');
-    for(let j = 0; j < 29; j++){
+    for(let j = 0; j < 36; j++){
       const td = document.createElement('td');
       td.innerHTML = "~";
 
       td.onmouseover = function () {
-        /* if(td.style.color === "transparent"){
-          td.style.color = "initial";
-        }
-        else {
-          td.style.color = "transparent";
-        } */
+        td.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        td.style.fontSize = "2rem";
+      };
+      td.onclick = function () {
         td.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
       };
 
       dataRow.appendChild(td);
+    }
+    table.appendChild(dataRow);
+  } */
+
+  let gridSpacing = 55;
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+
+  for (let y = 0; y < H - (gridSpacing * 2); y += gridSpacing) {
+    const dataRow = document.createElement('tr');
+    for (let x = gridSpacing; x < W - gridSpacing; x += gridSpacing) {
+        const td = document.createElement('td');
+        td.innerHTML = "〰";
+
+        td.style.left = `${x}px`;
+        td.style.top = `${y}px`;
+
+        td.onmouseover = function () {
+          td.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+          td.style.fontSize = "1.7rem";
+        };
+        td.onclick = function () {
+          td.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+        };
+
+        dataRow.appendChild(td);
     }
     table.appendChild(dataRow);
   }
