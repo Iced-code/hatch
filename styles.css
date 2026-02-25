@@ -28,16 +28,19 @@ body {
     height: 98vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 
     -webkit-user-select: none;
     user-select: none;
+
+    background-color: rgb(5, 0, 30);
+    color: white;
 }
 
 .main {
     width: 70vmin;          /* responsive size */
     aspect-ratio: 1 / 1;    /* keeps it a square */
-    background-color: rgb(211,211,211);
+    /* background-color: rgb(211,211,211); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,14 +52,23 @@ body {
     font-size: 2rem;
 }
 .main:hover {
-    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.2); */
 }
 
 
 table, td {
     border-collapse: collapse;
-    padding: 8px;
-    text-align: left;
+    padding: 4px;
+    text-align: center;
+}
+
+table {
+    position: absolute;
+}
+
+td {
+    padding: 1px;
+    font-size: 2rem;
 }
 
 td:hover {

@@ -5,9 +5,10 @@ const counter = document.getElementById("count");
 function updateCounter(){
     count += 1;
     mainDiv.style.backgroundColor = `rgb(${211-(10*count)}, ${211-(5*count)}, 211)`;
-    counter.innerText = count;
+    // counter.innerText = count;
 }
 
+let emojis = ["⭐", "🌙", "☀️", "🪐", "☄️", "✨"];
 
 function createTableFromJson() {
   // Get the container element
@@ -21,7 +22,7 @@ function createTableFromJson() {
 
   let id = 1;
   // Create table body rows
-  columns.forEach(item => {
+  /* columns.forEach(item => {
     const dataRow = document.createElement('tr');
     columns.forEach(col => {
       const td = document.createElement('td');
@@ -39,7 +40,28 @@ function createTableFromJson() {
       dataRow.appendChild(td);
     });
     table.appendChild(dataRow);
-  });
+  }); */
+
+  for(let i = 0; i < 14; i++) {
+    const dataRow = document.createElement('tr');
+    for(let j = 0; j < 29; j++){
+      const td = document.createElement('td');
+      td.innerHTML = "~";
+
+      td.onmouseover = function () {
+        /* if(td.style.color === "transparent"){
+          td.style.color = "initial";
+        }
+        else {
+          td.style.color = "transparent";
+        } */
+        td.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+      };
+
+      dataRow.appendChild(td);
+    }
+    table.appendChild(dataRow);
+  }
 
   // Append the created table to the container
   container.appendChild(table);
